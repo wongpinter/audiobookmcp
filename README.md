@@ -24,7 +24,7 @@ Example deployment: `https://audiobook-discovery-mcp.sugeng-doyle.workers.dev`. 
 | GET | `/health` | Service health check |
 | MCP Streamable HTTP | `/mcp` | MCP server endpoint |
 
-REST routes accept `query` (or `q`) and optional `provider` values: `auto`, `exa`, `brave`, or `firecrawl`. GET uses query parameters; POST uses a JSON body. Audiobook POST requests can also include structured `hints` for the title, author role, narrator, series/order, edition, format, and identifiers. Hints guide retrieval; metadata is still verified from citations. Set the `MCP_BEARER_TOKEN` secret before deployment to require `Authorization: Bearer <token>` on API and MCP routes. When the secret is absent, those routes are publicly callable; `/health` remains public either way. Keep the token in Wrangler secrets or a trusted backend, never in source control or a mobile app.
+REST routes accept `query` (or `q`) and optional `provider` values: `auto`, `exa`, `brave`, or `firecrawl`. GET uses query parameters; POST uses a JSON body. Audiobook POST requests can also include structured `hints` for the title, author role, narrator, series/order, edition, format, and identifiers. Hints guide retrieval; returned metadata includes source citations for client review. Set the `MCP_BEARER_TOKEN` secret before deployment to require `Authorization: Bearer <token>` on API and MCP routes. When the secret is absent, those routes are publicly callable; `/health` remains public either way. Keep the token in Wrangler secrets or a trusted backend, never in source control or a mobile app.
 
 ```sh
 curl -X POST 'https://audiobook-discovery-mcp.sugeng-doyle.workers.dev/api/audiobook' \\
