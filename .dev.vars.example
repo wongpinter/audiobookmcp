@@ -1,0 +1,22 @@
+# Local defaults mirror wrangler.jsonc; auto searches Brave first, then Exa and Firecrawl. Jina is temporarily disabled.
+SEARCH_PROVIDER=auto
+SEARCH_RESULT_LIMIT=5
+SEARCH_TIMEOUT_MS=5000
+MODEL_TIMEOUT_MS=10000
+CACHE_TTL_SECONDS=86400
+
+# Fill only the providers you use. Never put real values in this example file.
+BRAVE_API_KEY=
+EXA_API_KEY=
+FIRECRAWL_API_KEY=
+OPENROUTER_API_KEY=
+OPENROUTER_MODEL=google/gemini-3.1-flash-lite
+OPENROUTER_FALLBACK_MODEL=openai/gpt-4.1-mini
+
+# Optional local bearer auth; empty means local API/MCP routes are public.
+MCP_BEARER_TOKEN=
+
+# Alternative OpenAI-compatible configuration:
+# OPENAI_API_KEY=
+# OPENAI_BASE_URL=https://api.openai.com/v1
+# OPENAI_MODEL=gpt-4o-mini

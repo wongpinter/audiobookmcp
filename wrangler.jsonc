@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "audiobook-discovery-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "vars": {
+    "SEARCH_PROVIDER": "auto",
+    "OPENROUTER_MODEL": "google/gemini-3.1-flash-lite",
+    "OPENROUTER_FALLBACK_MODEL": "openai/gpt-4.1-mini",
+    "SEARCH_RESULT_LIMIT": "5",
+    "SEARCH_TIMEOUT_MS": "5000",
+    "MODEL_TIMEOUT_MS": "10000",
+    "CACHE_TTL_SECONDS": "86400"
+  },
+  "observability": { "enabled": true }
+}
